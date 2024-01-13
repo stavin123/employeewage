@@ -1,4 +1,7 @@
 wage=20
-time=8
-dailywageperHR=$((wage*time))
-echo $dailywageperHR
+fulltime=8
+halftime=4
+dailyfulltimewageperHR=$((wage*fulltime))
+dailyhalftimewageperHR=$((wage*halftime))
+echo $dailyfulltimewageperHR
+echo $dailyhalftimewageperHR
