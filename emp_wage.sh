@@ -1,11 +1,21 @@
-wage=20
-fulltime=8
-halftime=4
+ wage=20
+fulltime=100
+time=8
 month=20
-nohrs=$((month*fulltime))
-monthlywage=$((nohrs*wage))
-echo $monthlywage
-#     dailyfulltimewageperHR=$((wage*fulltime))
- #    echo $dailyfulltimewageperHR
-  #    dailyhalftimewageperHR=$((wage*halftime)) 
-   #   echo $dailyhalftimewageperHR
+echo "enter the  hrs worked"
+read hrs
+nohrs=$((month*time))
+
+case $hrs in
+      $fulltime)
+		monthlywage=$((hrs*wage))
+	 	echo $monthlywage
+		;;
+	$nohrs)
+		monthlywage=$((hrs*wage))
+		echo $monthlywage
+		;;
+	*)
+		echo "no. of hrs worked no statisfied "
+		;;
+esac
